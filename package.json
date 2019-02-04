@@ -1,0 +1,27 @@
+{
+  "name": "@bright/bookshelf-types",
+  "version": "1.0.0",
+  "description": "TypeScript definitions for bookshelf types",
+  "main": "index.d.ts",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bright/bookshelf-typescript.git"
+  },
+  "author": "Piotr Mionskowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bright/bookshelf-typescript/issues"
+  },
+  "homepage": "https://github.com/bright/bookshelf-typescript#readme",
+  "dependencies": {
+    "@types/knex": "~0.15.1",
+    "@types/bluebird": "~3.5.25",
+    "@types/lodash": "~4.14.120",
+    "@types/create-error": "~0.3.30"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.1",
+    "tslint": "^5.12.1"
+  }
+}
