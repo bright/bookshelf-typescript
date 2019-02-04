@@ -1,5 +1,5 @@
 {
-  "name": "@bright/bookshelf-types",
+  "name": "@bright/bookshelf-typescript",
   "version": "1.0.0",
   "description": "TypeScript definitions for bookshelf types",
   "main": "index.d.ts",
