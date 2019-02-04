@@ -1,5 +1,5 @@
 # Installation
-> `npm install --save @types/bookshelf`
+> `npm install --save bright/bookshelf-typescripts`
 
 # Summary
 This package contains type definitions for bookshelfjs (http://bookshelfjs.org/).
