@@ -168,6 +168,8 @@ declare namespace Bookshelf {
 
         fetchAll(options?: FetchAllOptions): BlueBird<Collection<this>>;
 
+        fetchPage(options?: FetchPageOptions): BlueBird<Collection<this> & CollectionPage>;
+
         hasMany<R extends Model>(target: ModelSubclass<R>, foreignKey?: string, foreignKeyTarget?: string): Collection<R>;
 
         hasOne<R extends Model>(target: ModelSubclass<R>, foreignKey?: string, foreignKeyTarget?: string): R;
@@ -434,6 +436,16 @@ declare namespace Bookshelf {
     }
 
     type FetchAllOptions = FetchOptions
+    type FetchPageOptions = FetchAllOptions & ({ page: number, pageSize: number } | { limit: number, offset: number })
+
+    interface CollectionPage {
+        readonly pagination: Readonly<{
+            rowCount: number, // Total number of rows found for the query before pagination
+            pageCount: number, // Total number of pages of results
+            page: number, // The requested page number
+            pageSize: number, // The requested number of rows per page
+        }>
+    }
 
     interface SaveOptions extends SyncOptions {
         method?: string;
